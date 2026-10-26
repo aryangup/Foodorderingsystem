@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crave — Food Ordering</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">✦</span> crave<span class="dot">.</span></a>
+<nav><a href="#menu">Menu</a><a href="#about">About</a><a href="#orders">My Orders</a></nav>
+<button class="cart-button" id="cartOpen">🛒 <span>Cart</span> <b id="cartCount">0</b></button></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">GOOD FOOD. GOOD MOOD.</p><h1>Your next<br>favourite <em>meal.</em></h1>
+<p class="hero-sub">Freshly prepared favourites, delivered right to your door. A little joy in every bite.</p>
+<a class="primary-btn" href="#menu">Explore menu <span>↗</span></a><div class="hero-meta"><span>⭐ 4.9/5</span><span>·</span><span>Freshly made daily</span></div></div>
+<div class="hero-art"><div class="sun"></div><div class="hero-food">🍔</div><div class="floating f1">🍟</div><div class="floating f2">🥤</div><div class="art-label">MADE WITH<br>♥ & FRESHNESS</div></div></section>
+<section class="menu-section" id="menu"><div class="section-heading"><div><p class="eyebrow">WHAT ARE YOU CRAVING?</p><h2>Popular <em>right now</em></h2></div><div class="search-wrap">⌕ <input id="search" placeholder="Search dishes..."></div></div>
+<div class="filters" id="filters"><button class="filter active" data-category="All">All items</button><button class="filter" data-category="Burgers">Burgers</button><button class="filter" data-category="Pizza">Pizza</button><button class="filter" data-category="Indian">Indian</button><button class="filter" data-category="Wraps">Wraps</button><button class="filter" data-category="Sides">Sides</button><button class="filter" data-category="Desserts">Desserts</button><button class="filter" data-category="Drinks">Drinks</button></div>
+<div class="menu-grid" id="menuGrid"><p>Loading menu…</p></div></section>
+<section class="promo" id="about"><div><p class="eyebrow">A LITTLE EXTRA LOVE</p><h2>Good food brings<br>everyone <em>together.</em></h2><p>Thoughtful ingredients. Big flavours. Happy moments.</p></div><div class="promo-emoji">🥗</div></section>
+<section class="orders-section" id="orders"><p class="eyebrow">KEEP TRACK</p><h2>Recent <em>orders</em></h2><div id="ordersList" class="orders-list">Your recent order updates will appear here.</div></section>
+</main>
+<footer><a class="brand" href="#">✦ crave<span class="dot">.</span></a><span>Made fresh, served with love.</span><span>© 2026 Crave Food Co.</span></footer>
+<div class="overlay" id="overlay"></div><aside class="cart-panel" id="cartPanel"><div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your cart</h2></div><button id="cartClose" class="close-btn">✕</button></div><div id="cartItems" class="cart-items"></div><div class="cart-bottom"><div class="total-row"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><button id="checkoutBtn" class="primary-btn full">Continue to checkout →</button><p class="small-note">Delivery fee calculated at checkout.</p></div></aside>
+<div class="modal-wrap" id="checkoutModal"><form class="checkout-modal" id="checkoutForm"><div class="cart-head"><div><p class="eyebrow">ALMOST THERE</p><h2>Delivery details</h2></div><button type="button" id="checkoutClose" class="close-btn">✕</button></div><label>Full name<input name="customer" required placeholder="Your name"></label><label>Phone number<input name="phone" required inputmode="tel" pattern="[0-9+() -]{8,18}" placeholder="Your contact number"></label><label>Delivery address<textarea name="address" required rows="3" placeholder="House, street, area..."></textarea></label><div class="checkout-total">Order total <strong id="checkoutTotal">₹0</strong></div><button class="primary-btn full" type="submit">Place order ✓</button><p class="small-note">Demo project: no online payment is collected.</p></form></div>
+<div class="toast" id="toast" role="status"></div><script src="/app.js"></script>
+</body></html>
